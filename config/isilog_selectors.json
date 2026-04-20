@@ -1,0 +1,24 @@
+{
+  "ticket_page_url": "https://helpdesk.brgm.fr/IsilogWebSystem/Pages/HelpDesk/HELP005.aspx?Type=PROPERTY&Action=C&IwsId=1",
+  "ticket_page_urls": {
+    "incident": "https://helpdesk.brgm.fr/IsilogWebSystem/Pages/HelpDesk/HELP005.aspx?Type=PROPERTY&Action=C&IwsId=1",
+    "demande": "https://helpdesk.brgm.fr/IsilogWebSystem/Pages/HelpDesk/HELP005.aspx?Type=PROPERTY&Action=C&IwsId=2"
+  },
+  "fields": {
+    "demandeur": "#demandeur",
+    "beneficiaire": "#beneficiaire",
+    "site": "#site",
+    "objet": "#objet",
+    "description": "#description",
+    "categorie_label": "#categorie",
+    "urgence": "#urgence",
+    "impact": "#impact",
+    "actions_deja_realisees": "#actionsRealisees",
+    "resolution_proposee": "#resolutionProposee",
+    "resume_interne": "#resumeInterne"
+  },
+  "notes": {
+    "usage": "Adapter les sélecteurs selon l'instance Isilog.",
+    "security": "Ne jamais automatiser le clic sur le bouton Enregistrer."
+  }
+}

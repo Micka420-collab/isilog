@@ -1,0 +1,3 @@
+Bonjour, ici Marie Dupont du site de Lyon. Je n'arrive plus à me connecter au VPN depuis ce matin.
+J'ai déjà redémarré le PC et changé mon mot de passe hier, mais ça ne marche pas.
+C'est urgent car je dois accéder aux applications internes pour clôturer des dossiers clients.
