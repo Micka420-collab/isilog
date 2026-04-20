@@ -1,0 +1,17 @@
+{
+  "code_to_helpdesk": {
+    "vpn": "support_2i\\RESEAU\\VPN",
+    "mot_de_passe": "support_2i\\AUTHENTIFICATION\\Mot de passe",
+    "outlook": "support_2i\\APPLICATIONS\\MESSAGERIE\\Outlook",
+    "teams": "support_2i\\APPLICATIONS\\MESSAGERIE\\Teams",
+    "bdd_droits_acces": "support_2i\\APPLICATIONS\\BDD\\Demande de Droits d'accès",
+    "bdd_dump": "support_2i\\APPLICATIONS\\BDD\\Demande de dump",
+    "bdd_migration": "support_2i\\APPLICATIONS\\BDD\\Migration",
+    "application_autre": "support_2i\\APPLICATIONS\\AUTRES",
+    "installation_logiciel": "support_2i\\POSTES\\Installation Logiciel",
+    "station_accueil": "support_2i\\POSTES\\Station d'accueil",
+    "reseau": "support_2i\\RESEAU",
+    "authentification": "support_2i\\AUTHENTIFICATION",
+    "autre_incident": "support_2i"
+  }
+}
