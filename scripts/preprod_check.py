@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -16,6 +17,27 @@ def run_check(name: str, fn) -> tuple[bool, str]:
     except Exception as exc:
         return False, str(exc)
 
+
+
+
+def check_merge_conflicts() -> str:
+    conflict_pattern = re.compile(r"^(<{7}|={7}|>{7})(?:\s|$)", re.MULTILINE)
+    flagged: list[str] = []
+    for path in ROOT.rglob("*"):
+        if not path.is_file():
+            continue
+        if ".git" in path.parts or path.suffix in {".png", ".jpg", ".jpeg", ".ico", ".db"}:
+            continue
+        try:
+            text = path.read_text(encoding="utf-8")
+        except Exception:
+            continue
+        if conflict_pattern.search(text):
+            flagged.append(str(path.relative_to(ROOT)))
+
+    if flagged:
+        raise ValueError("Conflits Git détectés dans: " + ", ".join(flagged))
+    return "Aucun marqueur de conflit Git détecté"
 
 def check_files() -> str:
     required = [
@@ -71,6 +93,7 @@ def check_local_services() -> str:
 
 def main() -> int:
     checks = [
+        ("Conflits de merge", check_merge_conflicts),
         ("Présence fichiers", check_files),
         ("Validité JSON", check_json_config),
         ("Settings + SQLite", check_settings_and_db),

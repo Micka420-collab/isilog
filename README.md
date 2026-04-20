@@ -171,6 +171,7 @@ Ou:
 scripts\preprod_check.bat
 ```
 Le script vérifie:
+- absence de marqueurs de conflit Git (`<<<<<<<`, `=======`, `>>>>>>>`),
 - présence des fichiers critiques,
 - validité des JSON de config,
 - chargement settings + accès SQLite,
